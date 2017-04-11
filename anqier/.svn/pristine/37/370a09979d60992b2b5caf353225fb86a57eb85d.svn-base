@@ -1,0 +1,7 @@
+
+{% extends "base.html" %}
+{% block content %}
+     <img alt="" src="/static/images/icon1.jpg" " style="width:700px;"></img>
+     <img alt="" src="/static/images/icon2.jpg" style="width:700px;padding-top:10px;"></img>
+{% endblock %}
+

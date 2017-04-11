@@ -1,0 +1,76 @@
+{% extends "base.html" %}
+{% block content %}
+       
+<div class="well">
+  <img src="/static/images/p1.png" class="img-rounded" style="float:left;margin-right:10px;"/>
+   <p> 您在为孩子放学后无人看管而烦恼吗？您在为孩子没有好的阅读习惯而忧虑吗？您在担心寒暑假来临孩子的托管问题吗？孙桥安琪儿乐园帮您解决，我们还设有绘本图书馆，大量的图书、绘本可供托管学生免费阅读。</p>
+　　<p>我们的核心团队成员具有本科或硕士以上学历，我们聘请的教师都具备国家认可的教师资质，我们将爱自己的孩子一样爱您的孩子。孙桥安琪儿乐园一定会是您的放心选择。孙桥安琪儿乐园—有效率、树习惯、爱学习。孙桥晚托学生同时享受免费阅读、奥数辅导、外语辅导。让家长放心满意！让孩子开心！受益！</p>
+　　<p>孙桥安琪儿乐园位于川杨新苑6期22号楼（中科路2635弄），东方江韵幼儿园隔壁，孙桥晚托班（免费接、小班制课业辅导）、幼儿晚托，早教 </p> 
+</div>
+
+<div class="panel-group" id="accordion">
+
+   <div class="panel panel-default" >
+    <div class="panel-heading">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                                    教学理念
+        </a>
+      </h4>
+    </div>
+    <div id="collapseOne" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  
+  <div class="panel panel-default" >
+    <div class="panel-heading blueBackGround">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse2">
+                                    教学风采
+        </a>
+      </h4>
+    </div>
+    <div id="collapse2" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  
+    <div class="panel panel-default">
+    <div class="panel-heading blueBackGround">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse3">
+                                          教学班介绍
+        </a>
+      </h4>
+    </div>
+    <div id="collapse3" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+  
+   <div class="panel panel-default">
+    <div class="panel-heading blueBackGround">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse4">
+                                                    师资介绍                         
+        </a>
+      </h4>
+    </div>
+    <div id="collapse4" class="panel-collapse collapse in">
+      <div class="panel-body">
+        Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+      </div>
+    </div>
+  </div>
+
+</div>
+
+       
+{% endblock %}

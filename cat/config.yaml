@@ -1,0 +1,20 @@
+name: cat
+version: 1
+
+libraries:
+- name: "django"
+  version: "1.5"
+  
+- name: "flask"
+  version: "0.7.2"
+ 
+- name: numpy
+  version: "1.6.1"
+  
+- name: lxml
+  version: "2.3.4"
+  
+handlers:
+- url: /static/
+  static_path: static
+  

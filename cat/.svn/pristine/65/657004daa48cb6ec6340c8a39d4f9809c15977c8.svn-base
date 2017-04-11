@@ -1,0 +1,46 @@
+#coding:utf-8
+from django.http import HttpResponse
+#from django.http import HttpRequest
+#from django.views.decorators.csrf import csrf_exempt
+
+
+from django.contrib.auth.models import User 
+from ma import models
+from django.shortcuts import render
+from ma import forms
+
+def pwd(request):
+    user = User.objects.get(username='tonyduan')
+    user.set_password('admin')
+    user.save()
+    return HttpResponse(u"修改密码成功")
+
+
+
+
+def login(request):
+    context = {}
+    return render(request, 'login.html', context)
+
+
+
+def userAdd(request):
+    '''
+    user=models.User(lname='duant',pwd='dant',age=10)
+    user.save();
+    '''
+    if request.method=='POST':
+        form=forms.UserForm(request.POST)
+        print form.data
+        if form.is_valid():
+            form.save()
+            render(request, 'userAdd.html', {'form':form})
+        else:
+            print form.errors
+            form=forms.UserForm()
+    
+    return render(request, 'userAdd.html', {})
+
+
+
+

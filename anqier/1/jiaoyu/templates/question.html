@@ -1,0 +1,97 @@
+{% extends "base.html" %}
+{% block content %}
+
+<script>
+
+  function submitForm(){
+      if($("#phone").val().length<1){
+        $("#phone").trigger("focus");
+        alert("请输入联系方式");
+        return;
+      }
+      
+      if($("#name").val().length<1){
+      	$("#name").trigger("focus");
+        alert("请输入联系姓名");
+        return;
+      }
+      
+      
+       if($("#ques").val().length<1){
+        $("#ques").trigger("focus");
+        alert("请输入问题");
+        return;
+      }
+  
+    $("#form1").submit();
+  }
+
+</script>
+
+<div class="well well-sm">       
+<form role="form" class="form-horizontal" action="/jiaoyu/questionAdd/" method="POST" id="form1">
+ <div class="form-group">
+    <label  class="col-sm-1 control-label">咨询类型</label>
+    <div class="col-sm-3">
+    <select id="title" name="title" class="form-control input-sm">
+        <option>幼儿</option>
+        <option selected = "selected">小学</option>
+        <option>中学</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="form-group">
+    <label   class="col-sm-1 control-label">联系方式</label>
+    <div class="col-sm-3">
+    <input type="tel" class="form-control input-sm"  placeholder="手机号码" id="phone" name="phone">
+    </div>
+  </div>
+  
+  <div class="form-group">
+    <label  class="col-sm-1 control-label">联系姓名</label>
+    <div class="col-sm-3">
+    <input type="text" class="form-control input-sm" name="name"  id="name"  placeholder="您的称呼">
+    </div>
+  </div>
+  
+  
+  <div class="form-group">
+    <label  class="col-sm-1 control-label">咨询内容</label>
+    <div class="col-sm-6">
+    	<textarea  rows="4" class="form-control input-sm" name="ques" id="ques" > </textarea>
+    </div>
+  </div>
+ 
+ 
+  <div class="form-group">
+    <div class="col-sm-offset-1 col-sm-5">
+      <button type="button" class="btn btn-primary" onclick="submitForm()" >提交咨询</button>
+    </div>
+  </div>
+</form>
+</div>
+<hr/>
+
+<div class="panel-group" id="accordion">
+{% for q in ques %}
+    <div class="panel panel-default" >
+    <div class="panel-heading blueBackGround">
+      <h4 class="panel-title">
+        <a data-toggle="collapse" data-toggle="collapse" data-parent="#accordion" href="#collapse{{q.id}}">
+          	<small style="color: #FF6600;"><strong>家长 {{q.name}}咨询</strong></small></font>
+        </a>
+      </h4>
+    </div>
+    <div id="collapse{{q.id}}" class="panel-collapse collapse in">
+      <div class="panel-body">
+         <p class="text-muted"><strong>时间：</strong>{{q.date|date:"Y年m月d日 H时i分"}}</p>
+         <p class="text-muted"><strong>问题：</strong>{{q.ques}}</p>
+         <p class="text-success"><strong>解答：</strong>{{q.answer}}</p>
+      </div>
+    </div>
+  </div>
+{% endfor %} 
+</div>
+       
+{% endblock %}

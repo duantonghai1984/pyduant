@@ -1,0 +1,57 @@
+#coding:utf-8
+from django.http import HttpResponse
+#from django.http import HttpRequest
+#from django.views.decorators.csrf import csrf_exempt
+import json
+
+
+from django.contrib.auth.models import User 
+from ma import models
+from django.shortcuts import render
+from ma import forms
+
+def pwd(request):
+    user = User.objects.get(username='tonyduan')
+    user.set_password('admin')
+    user.save()
+    return HttpResponse(u"修改密码成功")
+
+
+
+
+def home(request):
+    context = {}
+    return render(request, 'home2.html', context)
+
+
+
+def login(request):
+    context = {}
+    return render(request, 'login.html', context)
+
+
+def menu(request):
+    context = {}
+    return render(request, 'menu.html', context)
+
+def userAdd(request):
+    '''
+    user=models.User(lname='duant',pwd='dant',age=10)
+    user.save();
+    '''
+    if request.method=='POST':
+        form=forms.UserForm(request.POST)
+        if form.is_valid():
+            form.save()
+            render(request, 'userAdd.html', {'form':form,'userTypes':list(models.userType)})
+        else:
+            form=forms.UserForm()
+    else:
+        form=forms.UserForm()
+    return render(request, 'userAdd.html', {'form':form,'userTypes':list(models.userType)})
+
+
+
+def userTypes(request):
+    return HttpResponse(json.dumps(models.userType), content_type='application/json')
+

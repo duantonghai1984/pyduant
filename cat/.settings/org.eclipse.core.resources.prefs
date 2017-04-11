@@ -1,0 +1,13 @@
+eclipse.preferences.version=1
+encoding//cat/util/JsonUtil.py=utf-8
+encoding//cat/util/xmlUtil.py=utf-8
+encoding//jiaoyu/models.py=utf-8
+encoding//jiaoyu/urls.py=utf-8
+encoding//jiaoyu/views.py=utf-8
+encoding//learn/models.py=utf-8
+encoding//learn/urls.py=utf-8
+encoding//learn/views.py=utf-8
+encoding//ma/forms.py=utf-8
+encoding//ma/models.py=utf-8
+encoding//ma/urls.py=utf-8
+encoding//ma/views.py=utf-8

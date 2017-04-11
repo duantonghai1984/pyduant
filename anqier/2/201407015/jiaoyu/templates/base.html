@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title></title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/css/bootstrap.min.css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="http://cdn.bootcss.com/html5shiv/3.7.0/html5shiv.min.js"></script>
+        <script src="http://cdn.bootcss.com/respond.js/1.3.0/respond.min.js"></script>
+    <![endif]-->
+    <style>
+     
+     .blueBackGround{
+        background: url('/static/images/nav_bk1.png') repeat scroll;
+      }
+      
+  #contract{
+  width:100px;
+  height:80px;
+  background-color:white;
+  position:fixed;
+  bottom: 20px;
+  right: 30px;
+  }
+
+   body{
+      font-family:"宋体",Arial,Helvetica,sans-serif;
+   }
+   
+   
+  .carousel-indicators .active {
+    background-color: red;
+    height: 12px;
+    margin: 0;
+    width: 12px;
+   }
+   
+   .navbar-default .navbar-nav > li a{
+       color: #FF6600;
+   }
+   
+   .navbar-default .navbar-nav > li a:hover{
+      # background: url('/static/images/nav_abg1.jpg') no-repeat scroll left;
+   }
+   
+   .dropdown-menu > li a:hover{
+       background-color:blue;
+   }
+   
+   
+
+   
+   .panel-default > .panel-heading {
+    background-color: #F5F5F5;
+    border-color: red;
+    color: #333333;
+    }
+    
+    </style>
+  </head>
+  <body>
+     <div class="container" style="padding-top:10px;">
+       <div role="navigation" class="navbar navbar-default  blueBackGround" >
+        <div class="navbar-header">
+          <button data-target=".navbar-collapse" data-toggle="collapse" class="navbar-toggle" type="button">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+            <a href="#" class="navbar-brand"><img  alt="安琪儿乐园"  src="/static/images/head_icon1.jpg" style="height:25px;padding:0px;" /></a>
+        </div>
+        <div class="navbar-collapse collapse" style="background:url('/static/images/nav_2.jpg') no-repeat scroll;">
+          <ul class="nav navbar-nav" >
+            <li ><a href="/jiaoyu/" ><strong>主页</strong></a></li>
+            <li><a href="/jiaoyu/jieshao/" ><strong>关于安琪儿</strong></a></li>
+            <li><a href="/jiaoyu/contract/" ><strong>联系我们</strong></a></li>
+            <li><a href="/jiaoyu/classes/" ><strong>最新开班</strong></a></li>
+            <li class="dropdown">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#"><strong>课程介绍</strong> <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                <li><a href="#">中学辅导</a></li>
+                <li><a href="#">小学晚托</a></li>
+                <li><a href="#">幼儿教育</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+     
+    <div id="main" >
+    	{% block content %}
+    	
+		{% endblock %}
+    </div>
+     
+       <hr>
+
+      <footer >
+            <p>© Company 2013</p>
+      </footer>
+     </div>
+    <!-- /container -->
+    
+    
+    <div id="contract">
+	 <a href="/jiaoyu/classes/" target=blank>
+ 		<img src="/static/images/top1.gif" />
+  		<img src="/static/images/top2.jpg" />
+	 </a>
+	</div>
+
+
+    <script src="http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js"></script>
+    <script src="http://cdn.bootcss.com/twitter-bootstrap/3.0.3/js/bootstrap.min.js"></script>
+  </body>
+
+</body>
+</html>
